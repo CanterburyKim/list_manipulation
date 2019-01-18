@@ -31,7 +31,7 @@ class TestList(unittest.TestCase):
         # set up the test matrix
         test_row = [1,3,2,4]
         expected_result_row = [4,2,3,1]
-        times_row = ml.make_a_times2_list(test_row)
+        times_row = ml.make_a_rev_list(test_row)
 
         self.assertEqual(times_row, expected_result_row)
 
