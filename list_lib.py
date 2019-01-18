@@ -14,6 +14,17 @@ def make_a_times2_list(row_list):
     new_list=None
     return new_list
 
+def make_rev_list(row_list):
+    """
+    make a new list populated with the values
+    of the original in reverse order
+
+    so [ 1,2,3] creates new list [3,2,1]
+    """
+    new_list = None
+    return new_list
+
+
 def get_half_list(row_list):
     """
     Take a list and then make a new list that only contains the

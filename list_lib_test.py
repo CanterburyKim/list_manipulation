@@ -4,7 +4,6 @@ Test case file to test the transpose functions
 import unittest
 import list_lib as ml
 
-
 class TestList(unittest.TestCase):
     """
     test class
@@ -16,62 +15,109 @@ class TestList(unittest.TestCase):
         self.assertEqual(test_row, expected_result_row)
 
 
-    def test_find_min(self):
+    def test_make_a_times2_list(self):
         """
         """
         # set up the test matrix
-        test_row = [3,2,4, 1000]
-        expected_min = 2
-        min = ml.find_min(test_row)
-
-        self.assertEqual(expected_min, min)
-
-    def test_find_max(self):
-        test_row = [3,1000, 2,4]
-        expected_max= 1000
-        max=ml.find_max(test_row)
-
-        self.assertEqual(max, expected_max)
-
-    def test_smallest_bot(self):
-        """
-        """
-        # set up the test matrix
-        test_row = [5,7, 1, 3,22]
-        expected_result_row = [1,7,5,3,22]
-        ml.smallest_bot(test_row)
+        test_row = [1,3,2,4]
+        expected_result_row = [2,6,4,8]
+        ml.make_a_times2_list(test_row)
 
         self.assertEqual(test_row, expected_result_row)
 
-    def test_largest_top(self):
+    def test_make_rev_list(self):
         """
         """
         # set up the test matrix
-        test_row = [11, 2, 99, 3, 12]
-        expected_result_row = [11, 2, 12, 3, 99]
-        ml.largest_top(test_row)
+        test_row = [1,3,2,4]
+        expected_result_row = [4,2,3,1]
+        ml.make_a_times2_list(test_row)
 
         self.assertEqual(test_row, expected_result_row)
 
-    def test_find_min_in_range(self):
+    def test_get_half_list(self):
         """
         """
         # set up the test matrix
-        test_row = [2,7,4,1, -1]
-        expected_min = 2
-        mini = ml.find_min_in_range(test_row, 0,3)
+        test_row = [1,2,3,4,5,6,7,8]
+        expected_result_row = [1,2,3,4]
+        ml.get_half_list(test_row)
 
-        self.assertEqual(mini, expected_min)
+        self.assertEqual(test_row, expected_result_row)
 
-    def test_find_max_in_range(self):
+    def test_get_half_list2(self):
         """
         """
         # set up the test matrix
-        test_row = [99, 7, 22, 11, 5, 2]
-        expected_max = 22
-        maxi = ml.find_max_in_range(test_row, 1, len(test_row))
+        test_row = [1,2,3,4,5,6,7]
+        expected_result_row = [1,2,3]
+        ml.get_half_list(test_row)
 
-        self.assertEqual(maxi, expected_max)
+        self.assertEqual(test_row, expected_result_row)
+
+
+    def test_rotate_list_right(self):
+        """
+        """
+        test_row = [1,7,3,9]
+        expected_result_row = [9,1,7,3]
+
+        ml.rotate_list_right(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+
+    def test_rotate_list_left(self):
+        """
+        """
+        test_row = [1,7,3,9]
+        expected_result_row = [7,3,9,1]
+
+        ml.rotate_list_left(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+
+
+    def test_swap_spots_opp_list(self):
+        test_row = [1, 3, 5, 7, 11]
+        expected_result_row = [11, 7, 5, 3, 1]
+
+        ml.swap_spots_opp_list(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+
+    def test_swap_spots_opp_list2(self):
+        test_row = [1, 3, 5, 7]
+        expected_result_row = [7, 5, 3, 1]
+
+        ml.swap_spots_opp_list(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+
+
+    def test_swap_spots_adj_list(self):
+        test_row = [1,2,3,4,5,6]
+        expected_result_row = [2,1,4,3,6,5]
+
+        ml.swap_spots_adj_list(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+
+    def test_swap_spots_adj_list2(self):
+        test_row = [1,2,3,4,5]
+        expected_result_row = [2,1,4,3,5]
+
+        ml.swap_spots_adj_list(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+
+    def test_bubble_swap_list(self):
+        test_row = [7,5,6,3,2,1]
+        expected_result_row = [5,6,3,2,1,7]
+
+        ml.bubble_swap_list(test_row)
+
+        self.assertEqual(test_row,expected_result_row)
+        pass
 
 
 
