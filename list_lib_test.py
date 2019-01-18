@@ -21,9 +21,9 @@ class TestList(unittest.TestCase):
         # set up the test matrix
         test_row = [1,3,2,4]
         expected_result_row = [2,6,4,8]
-        ml.make_a_times2_list(test_row)
+        times_row = ml.make_a_times2_list(test_row)
 
-        self.assertEqual(test_row, expected_result_row)
+        self.assertEqual(times_row, expected_result_row)
 
     def test_make_rev_list(self):
         """
@@ -31,9 +31,9 @@ class TestList(unittest.TestCase):
         # set up the test matrix
         test_row = [1,3,2,4]
         expected_result_row = [4,2,3,1]
-        ml.make_a_times2_list(test_row)
+        times_row = ml.make_a_times2_list(test_row)
 
-        self.assertEqual(test_row, expected_result_row)
+        self.assertEqual(times_row, expected_result_row)
 
     def test_get_half_list(self):
         """
@@ -41,9 +41,9 @@ class TestList(unittest.TestCase):
         # set up the test matrix
         test_row = [1,2,3,4,5,6,7,8]
         expected_result_row = [1,2,3,4]
-        ml.get_half_list(test_row)
+        half_row = ml.get_half_list(test_row)
 
-        self.assertEqual(test_row, expected_result_row)
+        self.assertEqual(half_row, expected_result_row)
 
     def test_get_half_list2(self):
         """
@@ -51,9 +51,9 @@ class TestList(unittest.TestCase):
         # set up the test matrix
         test_row = [1,2,3,4,5,6,7]
         expected_result_row = [1,2,3]
-        ml.get_half_list(test_row)
+        half_row = ml.get_half_list(test_row)
 
-        self.assertEqual(test_row, expected_result_row)
+        self.assertEqual(half_row, expected_result_row)
 
 
     def test_rotate_list_right(self):
