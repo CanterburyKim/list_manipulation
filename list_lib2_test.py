@@ -13,17 +13,17 @@ class TestList(unittest.TestCase):
         """
         # set up the test matrix
         test_row = [3,2,4, 1000]
-        expected_min = 2
+        expected_min_index = 1
         min = ml.find_min(test_row)
 
-        self.assertEqual(expected_min, min)
+        self.assertEqual(expected_min_index, min)
 
     def test_find_max(self):
         test_row = [3,1000, 2,4]
-        expected_max= 1000
+        expected_max_index = 1
         max=ml.find_max(test_row)
 
-        self.assertEqual(max, expected_max)
+        self.assertEqual(max, expected_max_index)
 
     def test_smallest_bot(self):
         """
@@ -50,17 +50,17 @@ class TestList(unittest.TestCase):
         """
         # set up the test matrix
         test_row = [2,7,4,1, -1]
-        expected_min = 2
+        expected_min_index = 0
         mini = ml.find_min_in_range(test_row, 0,3)
 
-        self.assertEqual(mini, expected_min)
+        self.assertEqual(mini, expected_min_index)
 
     def test_find_max_in_range(self):
         """
         """
         # set up the test matrix
         test_row = [99, 7, 22, 11, 5, 2]
-        expected_max = 22
+        expected_max_index = 2
         maxi = ml.find_max_in_range(test_row, 1, len(test_row))
 
         self.assertEqual(maxi, expected_max)
